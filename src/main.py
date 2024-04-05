@@ -12,7 +12,6 @@ db = TinyDB("logs.json")
 def index():
     return render_template('index.html')
 
-
 @app.route('/ping', methods=['GET'])
 def ping():
     return pong
@@ -36,7 +35,6 @@ def logs_acesso():
     })
     return render_template('dash.html')
 
-# Rota que retorna os acessos
 @app.route('/info')
 def retorna_acessos():
     return render_template('info.html', itens=db)

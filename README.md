@@ -12,5 +12,7 @@ Dentro da página flask-htmx vá até a pasta src: `cd src`, e depois execute o 
 
 ## Como utilizar a aplicação:
 
+Na rota principal há uma 
+
 
 
