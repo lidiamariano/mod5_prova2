@@ -9,16 +9,9 @@ echo = TinyDB("echo.json")
 db = TinyDB("logs.json")
 
 @app.route('/')
-def logs_acesso():
-    db.insert({
-    "endereco":request.environ['REMOTE_ADDR'],
-    "metodo": request.method,
-    "hora":datetime.now()
-    })
+def index():
     return render_template('index.html')
 
-
-db.insert({'log':'GET /print'})
 
 @app.route('/ping', methods=['GET'])
 def ping():
@@ -33,15 +26,20 @@ def echo():
         echo.insert({"resposta": dados}, {"resposta" : texto})
 
         return f'<h1>dados: {dados}, texto: {texto}</h1>'
-        
-@app.route('/logs')
-def logs():
-    return render_template('logs.html')
+
+@app.route('/dash')
+def logs_acesso():
+    db.insert({
+    "endereco":request.environ['REMOTE_ADDR'],
+    "metodo": request.method,
+    "hora":datetime.now()
+    })
+    return render_template('dash.html')
 
 # Rota que retorna os acessos
-@app.route('/acessos')
+@app.route('/info')
 def retorna_acessos():
-    return render_template('item-log.html', itens=db)
+    return render_template('info.html', itens=db)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
