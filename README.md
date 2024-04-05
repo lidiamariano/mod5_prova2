@@ -12,7 +12,16 @@ Dentro da página flask-htmx vá até a pasta src: `cd src`, e depois execute o 
 
 ## Como utilizar a aplicação:
 
-Na rota principal há uma 
+Na rota principal há uma lista de todas as possíveis rotas a serem acessadas essas são:</br>
+**-Dash:**</br>
+Essa rota irá guardar todos os dados dos logs de acesso, que são "endereço", "metodo", "hora".
+**-Echo:**</br>
+Essa rota retorna um formulário em que os dados são coletados e guardados em um banco .json que é retornado na função
+**-Info:**</br>
+Essa rota retorna todas as informações de logs feitos.
+
+
+
 
 
 

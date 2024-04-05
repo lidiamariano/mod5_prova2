@@ -27,7 +27,7 @@ def echo():
         return f'<h1>dados: {dados}, texto: {texto}</h1>'
 
 @app.route('/dash')
-def logs_acesso():
+def dash():
     db.insert({
     "endereco":request.environ['REMOTE_ADDR'],
     "metodo": request.method,
@@ -36,7 +36,7 @@ def logs_acesso():
     return render_template('dash.html')
 
 @app.route('/info')
-def retorna_acessos():
+def info():
     return render_template('info.html', itens=db)
 
 if __name__ == '__main__':
