@@ -13,7 +13,4 @@ Dentro da página flask-htmx vá até a pasta src: `cd src`, e depois execute o 
 ## Como utilizar a aplicação:
 
 
-## Link de demonstração do vídeo:</br>
-https://youtu.be/5eo9MI2J6oA?si=KTCSWuytxACAcAQl
-
 
