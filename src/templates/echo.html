@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echo</title>
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <h1>Preencha o formulário!</h1>
+        <form action="/echo" method="post">
+            <label for="dados">Dados:</label><br>
+            <input type="text" id="dados" name="dados"><br>
+            
+            <label for="texto">Texto:</label><br>
+            <input type="text" id="texto" name="texto"><br>
+            
+            <button type="submit">Guardar dados</button>
+        </form>
+    </main>
+</body>
+</html>
